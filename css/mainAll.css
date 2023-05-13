@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 
+/* All Property */
+.header h4,.header h3 {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--main-text-color);
+}
+
+.header p {
+    margin: auto;
+    margin-top: 20px;
+    max-width: 800px;
+    text-align: center;
+    color: var(--paragraf-color);
+}
+
+/* All Property */
+
+
 * {
     font-family: "Inter", sans-serif;
 }
@@ -25,7 +45,8 @@ header {
     background-color: #f8f9fb;
     display: flex;
     align-items: center;
-    z-index: 1;
+    transition: 0.5s all;
+    z-index: 2;
 }
 
 nav {
@@ -95,10 +116,15 @@ nav {
 
 .drop-wrp {
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .drop-wrp img {
+    position: relative;
     transition: 0.4s;
+    top: 1.5px;
 }
 
 .drop:hover img {

@@ -2,7 +2,7 @@ let hamburger = document.querySelector(".hamburgerx");
 let menu = document.querySelector(".menu-Wrapper");
 let openDropButton = document.querySelector(".drop-wrp");
 let dropMenu = document.querySelector(".drop-down-menu"); //!
-let menuResourImg = document.querySelector("#res");
+let menuResourImg = document.querySelectorAll(".res");
 
 hamburger.addEventListener("click", () => {
   menu.classList.toggle("active");
@@ -35,9 +35,14 @@ window.addEventListener("click", (e) => {
 
 function Check() {
   if (dropMenu.classList.contains("mobile-active")) {
-    menuResourImg.style.transform = "rotate(180deg)";
+    menuResourImg.forEach((item) =>{
+      item.style.transform = "rotate(180deg)";
+    })
   } else {
-    menuResourImg.style.transform = "rotate(0deg)";
+    menuResourImg.forEach((item) =>{
+      item.style.transform = "rotate(0)";
+    })
   }
 }
+
 
