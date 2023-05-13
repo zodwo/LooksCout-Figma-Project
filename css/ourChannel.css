@@ -290,6 +290,10 @@ header,
         display: flex;
         flex-direction: column;
     }
+    .page-5 .main img{
+        max-width: 100%;
+        object-fit: cover;
+    }
     .page-5 .main a {
         display: inline-block;
         font-weight: 600;
