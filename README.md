@@ -1,2 +1,2 @@
 # Lookscout-Figma-Project
-# https://fantastic-alpaca-c8931e.netlify.app/
+# https://lookscout-figma.netlify.app/
