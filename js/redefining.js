@@ -10,7 +10,7 @@ window.addEventListener("scroll", checkscrool);
 checkscrool();
 
 function checkscrool() {
-  const main_scrol = 710;
+  const main_scrol = innerWidth <= 769 ? 1121 : 710;
   const trigger_scrool = document.documentElement.scrollTop;
 
   if (trigger_scrool >= main_scrol) {
@@ -44,6 +44,7 @@ function checkscrool() {
       item.style.display = "block";
     });
   }
+
 }
 
 const rightWidth = document.querySelector(".page-1 .right");
@@ -51,11 +52,11 @@ const rightWidth = document.querySelector(".page-1 .right");
 window.addEventListener("resize", () => {
   const mainWidth = 1400;
   const thisWidth = window.innerWidth;
-  console.log(thisWidth);
 
   if (thisWidth <= mainWidth) {
-    rightWidth.classList.add("width-sensor")
-  }else{
-    rightWidth.classList.remove("width-sensor")
+    rightWidth.classList.add("width-sensor");
+  } else {
+    rightWidth.classList.remove("width-sensor");
   }
+
 });
