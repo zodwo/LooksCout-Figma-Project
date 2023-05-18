@@ -4,6 +4,7 @@ const headerList = document.querySelector(".drop-down-menu");
 const darkLOGO = document.querySelectorAll(".dark");
 const whiteLOGO = document.querySelectorAll(".white");
 const menuColor = document.querySelector(".menu-Wrapper");
+const pageHeight = document.querySelector(".page-1-background");
 
 
 window.addEventListener("scroll", checkscrool);
@@ -11,7 +12,7 @@ window.addEventListener("scroll", checkscrool);
 checkscrool();
 
 function checkscrool() {
-  const main_scrol = 601;
+  const main_scrol = pageHeight.offsetHeight ;
   const trigger_scrool = document.documentElement.scrollTop;
 
   if ( trigger_scrool >= main_scrol) {
