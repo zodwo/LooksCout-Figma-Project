@@ -295,7 +295,7 @@ footer .pryt {
 .page-5 .main {
   min-height: 316px;
   margin-top: 40px;
-  padding: 10px 0;
+  padding: 10px;
   background: var(--default-color);
   border-radius: 10px;
   display: flex;
@@ -340,6 +340,137 @@ footer .pryt {
   font-weight: 500;
 }
 /* Page 5 */
+
+/* Page 6  */
+
+.page-6 {
+  padding: 60px 0;
+}
+
+.page-6 .content {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(284px, 1fr));
+  justify-content: center;
+  gap: 10px;
+}
+
+.page-6 .content .card {
+  width: 100%;
+  background: var(--default-color);
+  border: 1px solid #eaebf0;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.04);
+  border-radius: 10px;
+  min-height: 552px;
+}
+.page-6 .content .card .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: max-content;
+  padding: 10px;
+  min-height: 270px;
+}
+
+.page-6 .content .card .img {
+  position: relative;
+}
+
+.page-6 .content .card .img img:first-child {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 248px;
+}
+.page-6 .content .card .card-content {
+  margin-bottom: 40px;
+}
+
+.page-6 .content .card .card-content .date {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.page-6 .content .card .card-content .date span {
+  display: inline-block;
+}
+
+.page-6 .content .card .card-content .date span:first-child {
+  width: 68px;
+  height: 28px;
+  background: #f5faff;
+  border-radius: 5px;
+  color: #437ef7;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-6 .content .card .card-content .date span:last-child {
+  color: #5f6d7e;
+}
+
+.page-6 .content .card .card-content .text {
+  margin: 20px 0;
+}
+
+.page-6 .content .card .card-content .text h3 {
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--main-text-color);
+}
+
+.page-6 .content .card .card-content .text p {
+  color: #5f6d7e;
+  margin-top: 20px;
+}
+
+.page-6 .content .card .card-content a {
+  color: #437ef7;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.page-6 .main .user {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  width: 95%;
+  gap: 10px;
+  bottom: 10px;
+}
+
+.page-6 .main .user .profil {
+  display: flex;
+}
+
+.page-6 .main .user .text-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-6 .main .user .text-wrapper span:first-child {
+  font-weight: 500;
+  font-size: 15px;
+  color: var(--main-text-color);
+}
+
+.page-6 .main .user .text-wrapper span:last-child {
+  color: var(--paragraf-color);
+}
+.page-6 .main .user .date span {
+  display: inline-block;
+  color: var(--paragraf-color);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* Page 6  */
 
 @media (max-width: 769px) {
   .menu-Wrapper.color-active {
@@ -461,6 +592,4 @@ footer .pryt {
   .page-2 .content .main {
     grid-template-columns: repeat(1, minmax(10px, 384px));
   }
-
-
 }

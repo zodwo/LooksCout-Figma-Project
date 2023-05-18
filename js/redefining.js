@@ -49,6 +49,34 @@ function checkscrool() {
 }
 
 const rightWidth = document.querySelector(".page-1 .right");
+const cardHeight = document.querySelectorAll(".page-6 .content .card .main");
+
+class UI {
+  static display() {
+    cardHeight.forEach((item) => {
+      //
+      let mainHeight = item.offsetHeight;
+      const defaultHeight = 270;
+
+      const defaultWidth = window.innerWidth;
+      const mainWidth = 1460;
+
+      for (let i = 0; i < 1; i++) {
+        if (cardHeight[i].offsetHeight != mainHeight) {
+          mainHeight = cardHeight[i].offsetHeight;
+        }
+        if (mainHeight > defaultHeight) {
+          item.style.minHeight = mainHeight + "px";
+        }else{
+          item.style.minHeight = defaultHeight + "px"
+        }
+
+      }
+
+      console.log(mainWidth);
+    });
+  }
+}
 
 window.addEventListener("resize", () => {
   const mainWidth = 1400;
@@ -59,4 +87,8 @@ window.addEventListener("resize", () => {
   } else {
     rightWidth.classList.remove("width-sensor");
   }
+
+  UI.display();
 });
+
+window.addEventListener("DOMContentLoaded", UI.display());
