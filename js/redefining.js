@@ -6,10 +6,7 @@ const menuColor = document.querySelector(".menu-Wrapper");
 const SignColor = document.querySelector("#sign");
 const rightWidth = document.querySelector(".page-1 .right");
 const cardHeight = document.querySelectorAll(".page-6 .content .card .main");
-
-window.addEventListener("scroll", checkscrool);
-
-
+const maxWidth = 1440;
 function checkscrool() {
   const pageHeight = document.querySelector(".page-1");
 
@@ -49,6 +46,8 @@ function checkscrool() {
   }
 }
 
+let defaultWidth = window.innerWidth;
+
 class UI {
   static display() {
     //
@@ -58,6 +57,7 @@ class UI {
       let mainHeight = item.offsetHeight;
 
       for (let i = 0; i < 1; i++) {
+        //
         if (cardHeight[i].offsetHeight != mainHeight) {
           mainHeight = cardHeight[i].offsetHeight;
         }
@@ -65,12 +65,22 @@ class UI {
           item.style.minHeight = mainHeight + "px";
         }
       }
+      let currentWidth = window.innerWidth;
+
+      window.addEventListener("resize", () => {
+        if (currentWidth === defaultWidth + 1) {
+          item.style.minHeight = mainHeight - 100 + "px";
+          //
+          console.log("default",defaultWidth);
+          defaultWidth = currentWidth;
+        } else {
+          defaultWidth = currentWidth;
+        }
+      });
     });
     //
   }
 }
-
-let defaultWidth = window.innerWidth;
 
 window.addEventListener("resize", () => {
   const mainWidth = 1400;
@@ -82,16 +92,12 @@ window.addEventListener("resize", () => {
     rightWidth.classList.remove("width-sensor");
   }
 
-  let currentWidth = window.innerWidth;
-  if (currentWidth === defaultWidth + 1) {
-    currentWidth = defaultWidth;
-    console.log(defaultWidth);
-  }
-
   UI.display();
 });
 
-window.addEventListener("DOMContentLoaded", () =>{
+window.addEventListener("DOMContentLoaded", () => {
   checkscrool();
-  UI.display()
+  UI.display();
 });
+
+window.addEventListener("scroll", checkscrool);
