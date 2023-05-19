@@ -711,4 +711,8 @@
     .page-5 .content {
         grid-template-columns: repeat(auto-fit, minmax(294px, 1fr));
     }
+
+    .page-8 .content .main .left h4{
+        font-size: 28px;
+      }
 }

@@ -687,7 +687,6 @@ footer .pryt {
     }
 
 
-
     /* Page 7  */
 
 }
@@ -745,4 +744,9 @@ footer .pryt {
         height: 210px;
         width: 100%;
     }
+
+    .page-8 .content .main .left h4{
+        font-size: 28px;
+      }
+    
 }
