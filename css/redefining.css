@@ -489,6 +489,7 @@ footer .pryt {
 /* Page 8 */
 .page-8 {
   margin: 60px 0 0 0;
+  background-color: var(--blue-color);
   padding: 60px 0;
 }
 
@@ -505,7 +506,7 @@ footer .pryt {
   font-weight: 600;
   font-size: 32px;
   line-height: 42px;
-  color: var(--main-text-color);
+  color: var(--default-color);
   margin: 20px 0;
 }
 
@@ -541,7 +542,7 @@ footer .pryt {
 }
 
 .of1endus {
-  color: var(--blue-color);
+  color: var(--default-color);
 }
 
 /* Page 8 */
